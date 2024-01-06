@@ -6,11 +6,9 @@ if __name__ == "__main__":
     if length != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-
     a = int(argv[1])
     sign = argv[2]
     b = int(argv[3])
-
     if sign == '+':
         print(f"{a} {sign} {b} = {add(a, b)}")
     elif sign == '-':
