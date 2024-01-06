@@ -4,4 +4,4 @@ if __name__ == "__main__":
     all_functions = dir()
     for i in range(0, len(all_functions)):
         if all_functions[1][:2] != "__":
-            print("{:s}".format(all_functions))
+            print("{:s}".format(all_functions[i]))
