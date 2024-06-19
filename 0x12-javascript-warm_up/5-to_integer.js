@@ -11,3 +11,4 @@ if (!args[2]) {
     console.log('My number: ' + num);
   }
 }
+
