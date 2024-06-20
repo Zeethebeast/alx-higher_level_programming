@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-//const i_s = ` is `;
-const args = process.argv;
+const { argv } = require('node:process');
 
-console.log(args[2]  + " is "  + args[3]);
+console.log(argv[2] + ' is ' + argv[3]);
