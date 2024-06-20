@@ -1,5 +1,11 @@
 #!/usr/bin/node
 
-const { argv } = require('node:process');
+const multiType = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
 
-console.log(argv[2] + ' is ' + argv[3]);
+for (const j of multiType) {
+  console.log(j);
+}
