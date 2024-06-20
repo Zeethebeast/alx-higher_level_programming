@@ -1,13 +1,5 @@
 #!/usr/bin/node
-const lin = [
-'C is fun',
-'Python is cool',
-'JavaScript is amazing'
-];
 
-let index = 0;
+const { argv } = require('node:process');
 
-while (index < lin.length) {
-	console.log(lin[index]);
-	index++;
-}
+console.log(argv[2] + ' is ' + argv[3]);
