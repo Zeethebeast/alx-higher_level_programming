@@ -1,5 +1,11 @@
 #!/usr/bin/node
-
-console.log('C is fun');
-console.log('Pythjon is cool');
-console.log('JavaScript is amazing');
+const myvar = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
+let index = 0;
+while (index < myvar.length) {
+  console.log(myvar[index]);
+  index++;
+}
