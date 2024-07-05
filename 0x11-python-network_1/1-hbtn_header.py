@@ -7,8 +7,8 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 url = sys.argv[1]
-header_name = 'X-Request-Id'
+#header_name = 'X-Request-Id'
 
 with urllib.request.urlopen(url) as response:
-    print(response.headers.get(header_name))
+    print(response.headers.get('X-Request-Id'))
 
