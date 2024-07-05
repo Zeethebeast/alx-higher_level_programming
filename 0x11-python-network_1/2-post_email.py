@@ -5,7 +5,7 @@ import sys
 
 
 url = 'http://0.0.0.0:5000/post_email'
-values = {'email' : 'hr@holbertonschool.com'}
+values = {'email': 'hr@holbertonschool.com'}
 data = urllib.parse.urlencode(values)
 data = data.encode('ascii')
 req = urllib.request.Request(url, data)
