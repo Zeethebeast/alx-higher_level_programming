@@ -1,22 +1,29 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-"""This is a python script take in an url and displays"""
-"""In the format or manner presented below"""
+"""This is a Python script that takes in a URL and an email address,
+encodes the email as data, sends a request, and displays the response."""
+
+import urllib.request
+import urllib.parse
+import sys
 
 if __name__ == "__main__":
-    import urllib.request
-    import urllib.parse
-    import sys
+    # Check if enough arguments are provided
+    if len(sys.argv) != 3:
+        print("Usage: python script.py <URL> <email>")
+        sys.exit(1)
 
-    # create the data.
-    data = {}
-    data['email'] = sys.argv[2]
+    # Create the data dictionary with 'email' key from command-line arguments
+    data = {'email': sys.argv[2]}
 
-    # encode the values to be sent over to the server
-    new = urllib.parse.urlencode(data)
-    new = encoded_data.encode('ascii')
+    # Encode the data to be sent over to the server
+    encoded_data = urllib.parse.urlencode(data)
+    encoded_data = encoded_data.encode('ascii')  # Encode as ASCII
 
-    # create a request using the url and the inteded data
-    request = urllib.request.Request(sys.argv[1], new)
+    # Create a request using the URL and the intended data
+    url = sys.argv[1]
+    request = urllib.request.Request(url, encoded_data)
+
+    # Send the request and print the response
     with urllib.request.urlopen(request) as response:
         print(response.read().decode('utf-8'))
