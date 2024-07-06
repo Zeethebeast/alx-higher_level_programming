@@ -7,8 +7,11 @@ import requests
 # Fetch data from https://alx-intranet.hbtn.io/status
 url1 = 'https://alx-intranet.hbtn.io/status'
 response1 = requests.get(url1)
-html1 = response1.text
 
-print('Body response:')
-print(f'\t- type: {type(html1)}')
-print(f'\t- content: {html1}')
+if response1.status_code == 200:
+    html1 = response1.text
+    print('Body response:')
+    print(f'\t- type: {type(html1)}')
+    print(f'\t- content: {html1}')
+else:
+    print(f'Failed to fetch data from {url1}. Status code: {response1.status_code}')
