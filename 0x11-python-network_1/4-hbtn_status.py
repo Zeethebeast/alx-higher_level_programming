@@ -5,7 +5,7 @@ Script to fetch and print the body response from specified URLs using the reques
 import requests
 
 # Fetch data from https://alx-intranet.hbtn.io/status
-response1 = requests.get('https://alx-intranet.hbtn.io/status')
+response1 = requests.get('http://0.0.0.0:5050/status')
 
 if response1.status_code == 200:
     html1 = response1.text
