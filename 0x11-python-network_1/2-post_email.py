@@ -3,17 +3,20 @@
 """This is a python script take in an url and displays"""
 """In the format or manner presented below"""
 
-import urllib.request
-import urllib.parse
-import sys
- 
-url = 'http://0.0.0.0:5000/post_email'
-values = {}
-values['email'] = sys.argv[2]
+if __name__ == "__main__":
+    import urllib.request
+    import urllib.parse
+    import sys
 
-data = urllib.parse.urlencode(values)
-data = data.encode('ascii')
-req = urllib.request.Request(sys.argv[1], data)
-with urllib.request.urlopen(req) as response:
-    response_data = response.read().decode('utf-8')
-    print(f'Your email is: {response_data}')
+    # create the data.
+    data = {}
+    data['email'] = sys.argv[2]
+
+    # encode the values to be sent over to the server
+    new = urllib.parse.urlencode(data)
+    new = encoded_data.encode('ascii')
+
+    # create a request using the url and the inteded data
+    request = urllib.request.Request(sys.argv[1], new)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode('utf-8'))
