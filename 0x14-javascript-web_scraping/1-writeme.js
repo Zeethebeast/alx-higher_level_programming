@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const fs = require('fs').promises;
 
-async function writeFileContent(filepath, content) {
+async function writeFileContent (filepath, content) {
   try {
     // Write the content to the file using fs.promises.writeFile
     await fs.writeFile(filepath, content, 'utf-8');
